@@ -1,14 +1,20 @@
 #ifndef LIB_TP_UTIL
 #define LIB_TP_UTIL
 
+struct Vec2 {
+    float x, y;
+};
+static_assert(sizeof(Vec2) == 0x8);
+
 struct Vec3 {
     float x, y, z;
 };
 static_assert(sizeof(Vec3) == 0xC);
 
 struct CameraMatrix {
-    float c0, c1, c2, c3, c4, c5, c6, c7;
+    Vec3 target;
+    Vec3 pos;
 };
-static_assert(sizeof(CameraMatrix) == 0x20);
+static_assert(sizeof(CameraMatrix) == 0x18);
 
 #endif  // LIB_TP_UTIL

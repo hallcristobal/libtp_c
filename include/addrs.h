@@ -36,6 +36,9 @@
 #define tp_mPadStatus_addr 0x804343F0
 #define tp_mPadSticks_addr 0x804343F2
 #define tp_mPadTriggers_addr 0x804343F6
+#define tp_mPadAStick_addr 0x804344E0¸
+#define tp_mPadACStick_addr 0x80434520
+#define tp_mPadATriggers_addr 0x80434430
 
 // TP
 #define tp_globalCounters_addr 0x80430CD8
@@ -103,6 +106,7 @@
 #define GXSetLineWidth_addr 0x8035C8BC
 #define GXClearVtxDesc_addr 0x8035B58C
 #define GXSetVtxDesc_addr 0x8035AEB8
+#define GXFlush_addr 0x8035becc
 #define GXInitTexObj_addr 0x8035DE40
 #define GXLoadTexObj_addr 0x8035E414
 #define GXInvalidateTexAll_addr 0x8035E664

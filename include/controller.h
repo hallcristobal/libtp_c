@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include "addrs.h"
+#include "utils.h"
 
 namespace Controller {
     namespace Pad {
@@ -38,6 +39,11 @@ namespace Controller {
         uint8_t trig_R;
     };
     static_assert(sizeof(PadTriggers) == 0x2);
+    
+    struct ATriggers {
+        float l, r;
+    };
+    static_assert(sizeof(ATriggers) == 0x8);
 
     struct PadButton {
         uint8_t analog_cardinal;
@@ -55,6 +61,9 @@ namespace Controller {
 #define tp_mPadStatus (*(Controller::PadStatus *)tp_mPadStatus_addr)
 #define tp_mPadSticks (*(Controller::PadSticks *)tp_mPadSticks_addr)
 #define tp_mPadTriggers (*(Controller::PadTriggers *)tp_mPadTriggers_addr)
+#define tp_mPadATriggers (*(Controller::ATriggers *)tp_mPadATriggers_addr)
+#define tp_mPadAStick (*(Vec2 *)tp_mPadAStick_addr)
+#define tp_mPadACStick (*(Vec2 *)tp_mPadACStick_addr)
 
     uint16_t buttons_down();
     uint16_t buttons_pressed();
