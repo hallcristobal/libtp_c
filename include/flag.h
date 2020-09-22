@@ -17,9 +17,9 @@ public:
 };
 namespace Flags {
 	struct TempFlags {
-		uint8_t flags[0x24];
+		uint8_t flags[0x20];
 	};  // struct TempFlags
-	static_assert(sizeof(TempFlags) == 0x24);
+	static_assert(sizeof(TempFlags) == 0x20);
 
 	struct GlobalFlags {
 		uint8_t flags[0x20];
@@ -27,8 +27,8 @@ namespace Flags {
 	static_assert(sizeof(GlobalFlags) == 0x20);
 
 	struct EventFlags {
-		uint8_t flags[0x163];
-	} __attribute__((packed));
-	static_assert(sizeof(EventFlags) == 0x163);
+		uint8_t flags[0x168];
+	}__attribute__((packed));
+	static_assert(sizeof(EventFlags) == 0x168);
 };      // namespace Flags
 #endif  // LIB_TP_FLAG
