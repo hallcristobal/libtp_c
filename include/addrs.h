@@ -2,6 +2,7 @@
 #define LIB_TP_ADDRS
 
 // System
+#define tp_memset_addr 0x8026f95c
 #define tp_memalign_addr 0x80263228
 #define tp_free_addr 0x80263260
 #define tp_strlen_addr 0x80368bE4

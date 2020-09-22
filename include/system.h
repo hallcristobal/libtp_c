@@ -6,6 +6,7 @@
 #include "addrs.h"
 #include "tp.h"
 
+typedef void (*tp_memset_t)(void *addr, int value, uint32_t size);
 typedef void *(*tp_memalign_t)(int32_t align, uint32_t size);
 typedef void *(*tp_memcpy_t)(void *dest,void *src,size_t size);
 typedef void (*tp_free_t)(void *addr);
@@ -16,6 +17,7 @@ typedef void (*tp_getSave_t)(TP::GameInfo *gameinfo, int32_t areaID);
 typedef void (*tp_putSave_t)(TP::GameInfo *gameinfo, int32_t areaID);
 
 
+#define tp_memset ((tp_memset_t)tp_memset_addr)
 #define tp_memalign ((tp_memalign_t)tp_memalign_addr)
 #define tp_memcpy ((tp_memcpy_t)tp_memcpy_addr)
 #define tp_free ((tp_free_t)tp_free_addr)
