@@ -1,5 +1,5 @@
-#ifndef LIB_TP_SYSTEM
-#define LIB_TP_SYSTEM
+#ifndef LIB_TP_MATH
+#define LIB_TP_MATH
 
 #define M_PI ((double)3.141592653589793238462643383279502884e+00)
 
@@ -49,4 +49,4 @@ typedef double (*tp_sqrt_t)(double x);
 #define tp_fastSqrt ((tp_fastSqrt_t)tp_fastSqrt_addr)
 #define tp_sqrt ((tp_sqrt_t)tp_sqrt_addr)
 
-#endif // !LIB_TP_SYSTEM
+#endif // !LIB_TP_MATH
